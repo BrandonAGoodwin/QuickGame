@@ -111,19 +111,19 @@ public class Game implements KeyListener {
     }
 
     private void moveRight() {
-        dx = x +1;
+        dx = Math.min(x + 1, mapSize - 1);
     }
 
     private void moveDown() {
-        dy = y + 1;
+        dy = Math.min(y + 1, mapSize - 1);
     }
 
     private void moveLeft() {
-        dx = x - 1;
+        dx = Math.max(x - 1, 0);
     }
 
     private void moveUp() {
-        dy = y - 1;
+        dy = Math.max(y - 1, 0);
     }
 
     private void move() {
